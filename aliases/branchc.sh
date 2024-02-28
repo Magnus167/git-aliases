@@ -1,4 +1,4 @@
-# # branchc
+# # branchc - show the current branch
 # ## Usage:
 # ```bash
 # git branchc
