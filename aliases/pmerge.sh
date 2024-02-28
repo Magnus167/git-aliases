@@ -1,4 +1,4 @@
-# # pmerge
+# # pmerge - pull and merge a branch
 # ## Usage:
 # ```bash
 # git checkout featureX
