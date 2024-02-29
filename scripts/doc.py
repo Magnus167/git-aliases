@@ -77,6 +77,13 @@ def compile_scripts(files: List[Dict[str, str]]):
 
 
 def generate_index(compiled_scripts: str, readme: str, file: str = "index.md"):
+    readme = readme.split("\n")
+    ix = 0
+    while not readme[ix].strip().startswith("#"):
+        ix += 1
+    readme = readme[ix + 1 :]
+    readme = "\n".join(readme)
+
     readme += "\n\n" + compiled_scripts
     readme = mdformat.text(readme, extensions={"gfm"})
     with open(file, "w") as f:
