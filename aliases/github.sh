@@ -1,4 +1,4 @@
-# github - go to the repository's home page (GitHub)
+# # github - go to the repository's home page (GitHub)
 # ## Usage:
 # ```bash
 # git github

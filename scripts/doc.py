@@ -91,7 +91,9 @@ def generate_index(compiled_scripts: str, readme: str, file: str = "index.md"):
 
 
 def main():
-    compiled_scripts = compile_scripts([load_file(fx) for fx in get_files(SCRIPTS_DIR)])
+    compiled_scripts = compile_scripts(
+        [load_file(fx) for fx in sorted(get_files(SCRIPTS_DIR))]
+    )
     readme = load_readme()
     generate_index(compiled_scripts, readme)
 
