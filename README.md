@@ -1,6 +1,8 @@
 # git-aliases
 Cool git aliases that I find useful in daily life
 
+GitHub Repo : https://github.com/Magnus167/git-aliases
+
 # `.gitconfig`
 
 ```gitconfig
