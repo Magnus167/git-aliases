@@ -48,11 +48,13 @@ def _fprint(group: list, msg: str):
         return
     print(msg)
     for ix, ux in enumerate(group):
-        print("\t", f"{ix+1}. ", end="")
-        print(ux["title"], "#" + ux["url"].split("/")[-1])
+        # print("\t", f"{ix+1}. ", end="")
+        print("\t", " - ", end="")
+        print(ux["title"])
+        print("\t\t", "Number: " + ux["url"].split("/")[-1])
         print("\t\t", f"[{ux['base']} ← {ux['head']}]")
-        print("\t\t", "URL:", ux["url"], "\n")
+        print("\t\t", ux["url"], "\n")
 
 
-_fprint(groups[0], "PRs from branch:")
-_fprint(groups[1], "PRs to branch:")
+_fprint(groups[0], f"PRs from branch: {len(groups[0])}")
+_fprint(groups[1], f"PRs to branch: {len(groups[1])}")
