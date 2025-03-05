@@ -20,3 +20,4 @@ GitHub Repo : https://github.com/Magnus167/git-aliases
 	pr = "!f() { BRANCH=$(git branch --show-current); REPOURL=$(git config --get remote.origin.url); python ~/git-aliases/python/getpr.py $REPOURL $BRANCH; }; f"
 	co-pr = "!f() { REPOURL=$(git config --get remote.origin.url); BRANCH=$(python ~/git-aliases/python/checkoutpr.py $REPOURL $1); git checkout $BRANCH; git pull; }; f"
 ```
+See this script for the `pr`/`getpr.py` workflow: [get_pr_full.py](https://gist.github.com/Magnus167/b4188738d5767d87d337fa04ae23e640#file-get_pr_full-py)
