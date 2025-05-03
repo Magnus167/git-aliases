@@ -17,6 +17,8 @@ GitHub Repo : https://github.com/Magnus167/git-aliases
 	cop = "!f() { git checkout $1 && git pull; }; f"
 	cob = checkout -b
 	branchr = branch --sort=-committerdate
+	prunegone = !git fetch --prune && git branch -vv | awk '/: gone]/{print $1}' | xargs -r git branch -d
+
 	pr = "!f() { BRANCH=$(git branch --show-current); REPOURL=$(git config --get remote.origin.url); python ~/git-aliases/python/getpr.py $REPOURL $BRANCH; }; f"
 	co-pr = "!f() { REPOURL=$(git config --get remote.origin.url); BRANCH=$(python ~/git-aliases/python/checkoutpr.py $REPOURL $1); git checkout $BRANCH; git pull; }; f"
 ```
